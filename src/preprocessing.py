@@ -1,8 +1,12 @@
 import pandas as pd
 
-def load_data(path="Energy_consumption.csv"):
-    """Load CSV dataset from data folder."""
-    df = pd.read_csv(path)
+def load_data(filename="Energy_consumption.csv"):
+    """Load CSV dataset from the repo root."""
+    # Get repo root (one level up from src)
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    file_path = os.path.join(repo_root, filename)
+    
+    df = pd.read_csv(file_path)
     return df
 
 def preprocess_data(df):
