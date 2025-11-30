@@ -1,4 +1,13 @@
-from preprocessing import load_data, preprocess_data
+import sys
+import os
+
+# Add the repo root folder to Python path
+repo_root = os.path.abspath(os.path.join(os.getcwd(), '..'))
+if repo_root not in sys.path:
+    sys.path.append(repo_root)
+import pandas as pd
+from IPython.display import Image, display
+from src.preprocessing import load_data, preprocess_data
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.ensemble import RandomForestRegressor
@@ -7,7 +16,6 @@ from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 import numpy as np
-import os
 
 def train_and_evaluate():
     df = load_data()
