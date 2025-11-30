@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_data(path="data/Energy_consumption.csv"):
+def load_data(path="Energy_consumption.csv"):
     """Load CSV dataset from data folder."""
     df = pd.read_csv(path)
     return df
