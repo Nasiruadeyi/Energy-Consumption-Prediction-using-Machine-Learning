@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
 # ⚡ Energy Consumption Prediction
 
 ## 📌 Project Overview  
